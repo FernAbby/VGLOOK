@@ -1,0 +1,326 @@
+/*--------------------
+default css
+-----------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 14px;
+  color: white;
+  background-color: #1e1a17;
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+li,
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border: none;
+}
+a {
+  color: #2e3647;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #0D0F13;
+}
+.section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  overflow: hidden;
+}
+.dropdown:after {
+  content: "";
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  vertical-align: middle;
+}
+/*----------------------
+figcaption css
+-----------------------*/
+.figcaption {
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background: url(../img/overlay_title_bg.png) bottom center repeat-x;
+  overflow: hidden;
+}
+.figcaption .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #000;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50%, 0);
+  -moz-transform: translate3d(0, 50%, 0);
+  -ms-transform: translate3d(0, 50%, 0);
+  -o-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
+  transition: transform 0.35s, opacity 0.35s;
+  -moz-transition: transform 0.35s, opacity 0.35s;
+  -webkit-transition: transform 0.35s, opacity 0.35s;
+  -o-transition: transform 0.35s, opacity 0.35s;
+}
+.figcaption .figcaption-content {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.figcaption .figcaption-content .figcaption-title {
+  max-width: 100%;
+  line-height: 1.8;
+  width: 100%;
+  text-shadow: 0 1px 2px #000000;
+  padding: 15px;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+  color: #fff;
+}
+.figcaption .figcaption-content .figcaption-artical {
+  color: #BBB;
+  font-size: 12px;
+  line-height: 1.8;
+  width: 100%;
+  padding: 15px;
+  margin-top: -15px;
+  display: none;
+}
+.figcaption:hover .overlay {
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  transform: translate3d(0, 0%, 0);
+  transition: transform 0.35s, opacity 0.35s;
+  -moz-transition: transform 0.35s, opacity 0.35s;
+  -webkit-transition: transform 0.35s, opacity 0.35s;
+  -o-transition: transform 0.35s, opacity 0.35s;
+}
+.figcaption:hover .figcaption-content {
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+}
+.figcaption:hover .figcaption-artical {
+  display: block;
+}
+/*----------------------
+input－group
+-----------------------*/
+.input-group {
+  width: 100%;
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  border: 1px solid #ccc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.input-group input {
+  position: relative;
+  z-index: 2;
+  width: 250px;
+  margin-bottom: 0;
+  display: table-cell;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  vertical-align: top;
+}
+.input-group .input-group-btn {
+  border: 1px solid transparent;
+  border-left: 1px solid #ccc;
+  vertical-align: top;
+  width: 57px;
+  display: table-cell;
+  color: #333;
+  background-color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+/*----------------------
+
+-----------------------*/
+.header {
+  background-color: #262b35;
+  min-width: 1200px;
+}
+.header a {
+  color: white;
+}
+.header span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header span a {
+  width: 80px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+  padding: 10px 20px;
+  position: relative;
+}
+.header span a:hover {
+  background-color: #343a48;
+}
+.header span a.dropdown {
+  width: auto;
+}
+.header .search {
+  width: 170px;
+  padding: 10px;
+  position: relative;
+}
+.header .search input {
+  padding-left: 10px;
+  padding-right: 22px;
+  width: 150px;
+  border-color: #ccc;
+  color: #555;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  height: 30px;
+}
+.header .search:after {
+  content: '';
+  height: 28px;
+  border-left: 1px solid #ccc;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: -22px;
+  z-index: 30;
+}
+.header .header-left {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .header-left .logo {
+  margin-left: -15px;
+  vertical-align: top;
+  text-indent: -10000px;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+.header .header-left .logo img {
+  display: block;
+  height: 30px;
+}
+.header .header-left .navbar {
+  vertical-align: top;
+  display: inline-block;
+}
+.header .header-right {
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .header-right .menu-icon {
+  width: 44px;
+  margin-right: 10px;
+  height: 50px;
+  padding: 15px 10px;
+  display: none;
+}
+.header .header-right .menu-icon span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-top: 4px;
+  background-color: #fff;
+}
+.header .menu {
+  width: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: none;
+}
+.header .menu span {
+  display: block;
+}
+.header .menu span a {
+  display: block;
+  width: auto;
+  text-align: center;
+}
+.header .menu .search {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.header .menu .search input {
+  width: 100%;
+}
+.header .menu.show {
+  display: block;
+}
+/*----------------------
+
+-----------------------*/
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
+  .header .section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateZ(0);
+  }
+  .header .section .header-left .logo {
+    margin-left: 0;
+  }
+  .header .section .header-left .navbar {
+    display: none;
+  }
+  .header .section .header-right .login {
+    display: none;
+  }
+  .header .section .header-right .menu-icon {
+    display: block;
+  }
+}
